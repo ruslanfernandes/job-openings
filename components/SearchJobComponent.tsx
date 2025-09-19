@@ -84,7 +84,12 @@ const SearchJobComponent: React.FC<Props> = ({
         InputProps={{
           endAdornment: (
             <InputAdornment position="end">
-              <IconButton type="submit" color="primary">
+              <IconButton
+                type="submit"
+                sx={{
+                  color: "#6B7280", // 👈 sets icon color
+                }}
+              >
                 <SearchIcon />
               </IconButton>
             </InputAdornment>

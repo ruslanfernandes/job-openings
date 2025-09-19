@@ -19,13 +19,13 @@ const JobComponent: React.FC<JobComponentProps> = ({
     <Card
       sx={{
         boxShadow: 1,
-        "&:hover": { boxShadow: 3 },
+        "&:hover": { boxShadow: 5 },
         transition: "0.3s",
         p: 2.5,
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        width: "100%", // full width
+        // width: "100%", // full width
       }}
     >
       {/* Job Info */}
@@ -62,11 +62,14 @@ const JobComponent: React.FC<JobComponentProps> = ({
           <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
             <AccessTimeIcon fontSize="small" color="action" />
             <Chip
-              label={job.type}
-              size="small"
+              label={job.type.toUpperCase()}
               sx={{
                 bgcolor: "#E5E7EB", // gray chip background
-                fontWeight: 500,
+                fontSize: "0.65rem",
+                fontWeight: 750,
+                textAlign: "end",
+                borderRadius: "4px",
+                color: "#6B7280",
               }}
             />
           </Box>
@@ -83,6 +86,7 @@ const JobComponent: React.FC<JobComponentProps> = ({
             color: "#2563EB",
             textTransform: "none",
             borderRadius: "9999px",
+            fontWeight: "600",
             px: 3,
           }}
         >
@@ -95,6 +99,7 @@ const JobComponent: React.FC<JobComponentProps> = ({
           sx={{
             color: "black",
             textTransform: "none",
+            fontWeight: "600",
           }}
         >
           View
